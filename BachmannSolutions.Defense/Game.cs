@@ -31,26 +31,23 @@ namespace BachmannSolutions.TowerDefense
 
                 MapLocation location = new MapLocation(0, 2, map);
 
-                if (path.IsOnPath(location))
-                {
-                    Console.WriteLine(location + " is on the path!");
-                    //return;
-                }
-
                 //test invaders
-                Invader[] invaders =
+                IInvader[] invaders =
                 {
                     new ShieldedInvader(path),
                     new FastInvader(path),
                     new StrongInvader(path),
-                    new BasicInvader(path)
+                    new BasicInvader(path),
+                    new ResurrectingInvader(path)
+
                 };
 
                 //test towers
                 Tower[] towers =
                 {
-                    new PowerTower(new MapLocation(1, 3, map)),
+                    new Tower(new MapLocation(1, 3, map)),
                     new SniperTower(new MapLocation(3, 3, map)),
+                    new PowerTower(new MapLocation(5, 3, map)),
                     new LongRangeTower(new MapLocation(5, 3, map))
                 };
 

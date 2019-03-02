@@ -61,6 +61,7 @@
     <Compile Include="BasicInvader.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="FastInvader.cs" />
+    <Compile Include="IInvader.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="LongRangeTower.cs" />
     <Compile Include="MapLocation.cs" />
@@ -69,8 +70,10 @@
     <Compile Include="Invader.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="PowerTower.cs" />
+    <Compile Include="ResurrectingInvader.cs" />
     <Compile Include="ShieldedInvader.cs" />
     <Compile Include="SniperTower.cs" />
+    <Compile Include="Random.cs" />
     <Compile Include="StrongInvader.cs" />
     <Compile Include="Tower.cs" />
     <Compile Include="Game.cs" />

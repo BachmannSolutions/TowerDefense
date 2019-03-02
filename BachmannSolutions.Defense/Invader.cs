@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BachmannSolutions.TowerDefense
 {
-    abstract class Invader
+    abstract class Invader : IInvader
     {
         private readonly Path _path;
         private int _pathStep = 0;
@@ -15,9 +15,9 @@ namespace BachmannSolutions.TowerDefense
 
         public MapLocation Location => _path.GetLocationAt(_pathStep);
 
-        public virtual int Health { get; protected set; } = 2;
+        public bool HasScored { get { return _pathStep >= _path.Length; } }
 
-        public bool HasScored { get { return _pathStep >= _path.Length;  } }
+        public abstract int Health { get; protected set; }
 
         public bool IsNeutralized => Health <= 0;
 
